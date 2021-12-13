@@ -1,0 +1,179 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap'); /* DOES IT WORK?*/
+html {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+body {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+.central {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    background-color: #000;
+    background-image: url('web-pracs-images/church-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.nav-links {
+    width: 600px;
+}
+.nav-links>ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    list-style-type: none;
+}
+
+.nav-links>ul>li>a {
+    text-decoration: none;
+    padding: 15px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: rgb(238, 229, 229);
+}
+
+.nav-links>ul>li>a:hover {
+    animation-name: flow;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+
+}
+
+@keyframes flow {
+    50% {
+        transform: translateX(-200px);
+        background-color: blue;
+        color: white;
+    }
+
+    /*to {
+        transform: translateX(1000px);
+    }*/
+}
+
+.central-title>h1 {
+    font-size: 72px;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mass-sec-hrs table, tr, th, td {
+    border: 1px solid #fff; 
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.mass-sec-hrs table {
+    border-radius: 10px;
+    box-shadow: 8px 8px 18px 8px rgb(103, 164, 168);
+}
+
+.content-main {
+    grid-area: main;
+}
+
+.content-main {
+    display: grid;
+    grid-auto-rows: repeat(2, 800px 500px);
+}
+
+.p-b-p {
+    display: flex;
+    justify-content: space-around;
+    padding: 28px;
+}
+
+.pray {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.praise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pray > p >a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.bible > p >a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.praise > p >a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+.parish-priest {
+    padding: 28px;
+    display: flex;
+    justify-content: stretch;
+}
+
+.parish-priest>p {
+width: 40%;
+}
+
+.parish-priest > p > span {
+    text-decoration: underline;
+    padding: 15px;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-auto-rows: repeat(3, auto);
+    justify-items: center;
+}
+
+
+.some-other-stuff>ul {
+    display: flex;
+    list-style-type: none;
+}
